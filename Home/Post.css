@@ -1,0 +1,105 @@
+.Post-main-container {
+  position: absolute;
+  margin-top: 50px;
+  height: 100%;
+  left: 25%;
+}
+
+.Post-main-wrapper {
+  border-radius: 5px;
+  width: 800px;
+  height: 650px;
+  left: 25%;
+  background-color: white;
+  margin-top: 20px;
+  border: 0.5px solid #d5d5d5;
+}
+
+.Post-top-wrapper {
+  margin-top: 15px;
+  height: 65px;
+  width: 100%;
+}
+
+.Post-top-left-wrapper {
+  width: 200px;
+  display: table;
+}
+
+.profile-img {
+  position: relative;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.user-name {
+  left: 20px;
+  position: relative;
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 25px;
+  top: -10px;
+}
+
+.time {
+  position: relative;
+  top: 18px;
+  left: -61px;
+}
+
+.post-img {
+  width: 800px;
+  height: 400px;
+}
+
+.Post-bottom-contents {
+  padding: 0 20px;
+}
+
+.option-like {
+  margin-right: 30px;
+  width: 40px;
+  height: 50px;
+}
+
+.option-reply {
+  margin-right: 30px;
+  width: 40px;
+  height: 50px;
+}
+
+.option-share {
+  margin-right: 30px;
+  width: 40px;
+  height: 50px;
+}
+
+.post-contents {
+  margin: 0;
+}
+
+.hashtag {
+  margin: 0;
+}
+
+.Post-bottom-left-wrapper {
+  float: left;
+}
+
+.reply {
+  margin: 0;
+  font-size: 30px;
+  color: #1d2129;
+}
+
+.Post-bottom-right-wrapper {
+  float: right;
+}
+
+.showReply {
+  font-size: 15px;
+  cursor: pointer;
+}
