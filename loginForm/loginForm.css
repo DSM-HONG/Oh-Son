@@ -1,0 +1,187 @@
+body {
+  background: #edf5ed 0% 0% no-repeat padding-box;
+}
+
+.top_fixed {
+  display: flex;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: #0733a2;
+  height: 50px;
+  z-index: 100;
+}
+
+#fixed_logo {
+  margin-left: 20em;
+  width: 160px;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 98%;
+  height: 100%;
+  display: flex;
+}
+
+.left-wrapper {
+  margin-top: 100px;
+}
+
+#logo {
+  float: left;
+  margin-left: 50px;
+  width: 600px;
+  height: 400px;
+}
+
+.right-wrapper {
+  display: flex;
+}
+
+.login-background {
+  margin-left: 3em;
+  margin-top: 100px;
+  width: 450px;
+  height: 350px;
+  background: white;
+  padding: 20px 60px;
+  border-radius: 16px;
+  box-shadow: 0px 3px 6px #0000001c;
+}
+
+#login {
+  color: #707070;
+  font-size: 40px;
+  position: relative;
+  left: 2%;
+  font-weight: bolder;
+}
+
+.Input-Box {
+  margin: 10px 0;
+}
+
+input::placeholder {
+  letter-spacing: 0;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+input:focus {
+  outline: none;
+}
+
+.ID-Box {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px;
+  border: 1px solid #707070;
+  border-radius: 24px;
+  width: 400px;
+  height: 45px;
+  margin: 10px;
+}
+
+.PW-Box {
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px;
+  border: 1px solid #707070;
+  border-radius: 24px;
+  width: 400px;
+  height: 45px;
+  margin: 10px;
+}
+
+.Button-Link {
+  bottom: 10px;
+  margin: 0px;
+}
+
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.left-container {
+  align-items: center;
+  display: flex;
+}
+
+#checkbox {
+  display: none;
+}
+
+#fakeCheckbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+  text-align: left;
+  font-size: 30px;
+  line-height: 0px;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#checkbox-ment {
+  margin-left: 10px;
+  text-decoration: underline;
+  width: 100px;
+}
+
+#login-box {
+  float: right;
+  font-weight: bolder;
+  font-size: 15px;
+  border-radius: 30px;
+  text-align: center;
+  width: 120px;
+  height: 30px;
+  background-color: #0733a2;
+  color: white;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+#login-box:hover {
+  background-color: rgb(30, 13, 107);
+  transition: all 0.5s;
+}
+
+.bottom-wrapper {
+  position: relative;
+}
+
+.bottom-wrapper div {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#find_IDPW {
+  color: #0733a2;
+}
+
+#register {
+  color: #0733a2;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0733a2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
