@@ -1,6 +1,23 @@
 import React, { useState } from "react";
 import Reply from "./Reply";
+import Input from "../common/Input";
+import styled from "styled-components";
 import "./Post.css";
+
+const StyledInput = styled(Input)`
+  margin: 0;
+  font-size: 30px;
+  color: #1d2129;
+  width: 500px;
+  height: 40px;
+  border: none;
+  &:focus {
+    border-bottom: 1px solid black;
+  }
+  &::placeholder {
+    font-weight: normal;
+  }
+`;
 
 const comments = [
   {
@@ -27,12 +44,17 @@ const comments = [
 
 const Post = ({ name, time }) => {
   const [isReply, setIsReply] = useState(false);
+  const [setValue] = useState("");
 
   const handleReply = () => {
     setIsReply(!isReply);
   };
 
-  const { userImg, userName, comment } = comments;
+  const onChange = e => {
+    setValue(e.target.value);
+  };
+
+  // const { userImg, userName, comment } = comments;
   let key = 0;
 
   var commentList = comments.map(({ userImg, userName, comment }) => (
@@ -52,6 +74,7 @@ const Post = ({ name, time }) => {
             <img
               className="profile-img"
               src="http://blog.jinbo.net/attach/615/200937431.jpg"
+              alt=""
             />
             <p className="user-name">{name}</p>
             <p className="time">{time}</p>
@@ -62,6 +85,7 @@ const Post = ({ name, time }) => {
           <img
             className="post-img"
             src="https://i0.wp.com/image.freepik.com/free-photo/set-bright-eggs-near-papers_23-2148050874.jpg"
+            alt=""
           />
         </div>
         <div className="Post-bottom-wrapper">
@@ -69,24 +93,34 @@ const Post = ({ name, time }) => {
             <img
               className="option-like"
               src="http://blog.jinbo.net/attach/615/200937431.jpg"
+              alt=""
             />
             <img
               className="option-reply"
               src="http://blog.jinbo.net/attach/615/200937431.jpg"
+              alt=""
             />
             <img
               className="option-share"
               src="http://blog.jinbo.net/attach/615/200937431.jpg"
+              alt=""
             />
-            <p className="post-contents">게시글</p>
-            <p className="hashtag">해시태그</p>
+            <p className="post-contents">
+              HONG에서 만들고 있는 프로젝트다. 만들 때마다 홍홍 웃음소리가
+              나온다
+            </p>
+            <p className="hashtag">#HONG #손완서 # 잘생김</p>
             <hr />
             <div className="Post-bottom-left-wrapper">
-              <p className="reply">댓글 달기...</p>
+              <StyledInput
+                className="reply"
+                onChange={onChange}
+                placeholder="댓글 달기..."
+              />
               {/* <input className="reply" placeholder="댓글 달기..." /> */}
             </div>
             <div className="Post-bottom-right-wrapper">
-              <a className="showReply" onClick={handleReply}>
+              <a className="showReply" onClick={handleReply} href={null}>
                 댓글 보기
               </a>
             </div>

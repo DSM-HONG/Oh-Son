@@ -4,6 +4,7 @@
   height: 120px;
   border-radius: 5px;
   background-color: white;
+  z-index: 1000;
 }
 
 .writing-top-wrapper {
@@ -12,7 +13,7 @@
 
 input {
   margin-top: 5px;
-  width: 750px;
+  width: 780px;
   height: 75px;
   border: none;
   font-weight: normal;

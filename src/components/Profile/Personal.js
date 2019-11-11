@@ -13,7 +13,7 @@ const Personal = props => {
     <React.Fragment>
       <div className="Personal-main-container">
         <div className="Personal-top-wrapper">
-          <img className="Profile-img" src={image} />
+          <img className="Profile-img" src={image} alt="" />
           <div className="Identity">
             <div className="userName">{username}</div>
             <div className="userID">{userID}</div>

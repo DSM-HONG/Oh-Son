@@ -7,7 +7,7 @@ const Reply = props => {
   return (
     <>
       <div className="Reply-main-container">
-        <img className="Reply-userImg" src={userImg} />
+        <img className="Reply-userImg" src={userImg} alt=""/>
         <div className="Reply-right-wrapper">
           <span className="Reply-userName">{userName}</span>
           <span className="Reply-comment">{comment}</span>

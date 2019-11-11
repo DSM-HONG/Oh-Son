@@ -54,7 +54,7 @@ const Profile = () => {
             description={description}
           />
         </div>
-        <div className="a">{photoList}</div>
+        <div className="Profile-photolist">{photoList}</div>
       </div>
     </React.Fragment>
   );

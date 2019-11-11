@@ -1,8 +1,5 @@
 .Post-main-container {
-  position: absolute;
-  margin-top: 50px;
-  height: 100%;
-  left: 25%;
+
 }
 
 .Post-main-wrapper {
@@ -79,20 +76,17 @@
 
 .post-contents {
   margin: 0;
+  font-weight: lighter;
 }
 
 .hashtag {
   margin: 0;
+  font-weight: bold;
+  color: blue;
 }
 
 .Post-bottom-left-wrapper {
   float: left;
-}
-
-.reply {
-  margin: 0;
-  font-size: 30px;
-  color: #1d2129;
 }
 
 .Post-bottom-right-wrapper {

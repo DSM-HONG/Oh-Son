@@ -1,0 +1,11 @@
+.Hashtag-main-container {
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+}
+
+.Hashtag-hashtag {
+  color: blue;
+}
