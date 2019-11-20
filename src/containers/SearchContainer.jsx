@@ -4,11 +4,13 @@ import styled from "styled-components";
 
 const SearchStyle = styled(Input)`
   margin-left: 50px;
+  padding-left: 10px;
   width: 300px;
   height: 30px;
   font-size: 20px;
   font-weight: bold;
-  border-radius: 5px;
+  border: none;
+  border-radius: 10px;
 `;
 
 const SearchContainer = () => {

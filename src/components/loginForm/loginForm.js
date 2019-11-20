@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./loginForm.css";
 import oh_son_logo from "../oh_son_logo.PNG";
+import FindPW from "./FindPW";
 
 const Login = ({ id, pw, handleIdChange, handlePwChange, ONCLICK }) => {
   const state = {
@@ -12,7 +13,7 @@ const Login = ({ id, pw, handleIdChange, handlePwChange, ONCLICK }) => {
       <div className="main-container">
         <div className="main-wrapper">
           <div className="left-wrapper">
-            <img id="logo" src={oh_son_logo} alt=""/>
+            <img id="logo" src={oh_son_logo} alt="" />
           </div>
 
           <div className="right-wrapper">
@@ -58,7 +59,7 @@ const Login = ({ id, pw, handleIdChange, handlePwChange, ONCLICK }) => {
                 <div className="bottom-wrapper">
                   <div>
                     <a id="find_IDPW" href="localhost:3000">
-                      <Link to="">아이디/비밀번호 찾기</Link>
+                      <Link to="/FindPW">아이디/비밀번호 찾기</Link>
                     </a>
                   </div>
                   <div>

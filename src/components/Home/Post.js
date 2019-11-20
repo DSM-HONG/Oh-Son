@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import Reply from "./Reply";
-import Input from "../common/Input";
+import React, { useState, useRef } from "react";
+import Reply from "./Replylist";
 import styled from "styled-components";
+import LikeLogo from "./LikeLogo";
+import ReplyLogo from "./ReplyLogo";
+import ShareLogo from "./ShareLogo";
 import "./Post.css";
 
-const StyledInput = styled(Input)`
+const StyledInput = styled.input`
   margin: 0;
   font-size: 30px;
   color: #1d2129;
@@ -21,21 +23,25 @@ const StyledInput = styled(Input)`
 
 const comments = [
   {
+    id: 1,
     userImg: "https://loremflickr.com/240/240",
     userName: "Sonwanseo",
     comment: "Helloakse;fiasjfliasjfij"
   },
   {
+    id: 2,
     userImg: "https://loremflickr.com/240/240",
     userName: "qwersa",
     comment: "ajefqwehfqweifjqwiefjqw"
   },
   {
+    id: 3,
     userImg: "https://loremflickr.com/240/240",
     userName: "Squw6itdjfeo",
     comment: "Hehfjdfksgashsaefj"
   },
   {
+    id: 4,
     userImg: "https://loremflickr.com/240/240",
     userName: "Heasejf",
     comment: "Hejkgjmbnbxasjfij"
@@ -44,7 +50,10 @@ const comments = [
 
 const Post = ({ name, time }) => {
   const [isReply, setIsReply] = useState(false);
-  const [setValue] = useState("");
+  const [isLiked, setIsLiked] = useState(false);
+  const [inputValue, setValue] = useState("");
+  const [nextComments, setNextComments] = useState(comments);
+  const replyRef = useRef(null);
 
   const handleReply = () => {
     setIsReply(!isReply);
@@ -54,9 +63,15 @@ const Post = ({ name, time }) => {
     setValue(e.target.value);
   };
 
-  // const { userImg, userName, comment } = comments;
-  let key = 0;
+  const handleLikeToggle = () => {
+    setIsLiked(!isLiked);
+  };
 
+  const onReplyClick = () => {
+    replyRef.current.focus();
+  };
+
+  let key = 0;
   var commentList = comments.map(({ userImg, userName, comment }) => (
     <Reply
       key={key++}
@@ -90,21 +105,9 @@ const Post = ({ name, time }) => {
         </div>
         <div className="Post-bottom-wrapper">
           <div className="Post-bottom-contents">
-            <img
-              className="option-like"
-              src="http://blog.jinbo.net/attach/615/200937431.jpg"
-              alt=""
-            />
-            <img
-              className="option-reply"
-              src="http://blog.jinbo.net/attach/615/200937431.jpg"
-              alt=""
-            />
-            <img
-              className="option-share"
-              src="http://blog.jinbo.net/attach/615/200937431.jpg"
-              alt=""
-            />
+            <LikeLogo isLiked={isLiked} onClick={handleLikeToggle} />
+            <ReplyLogo onClick={onReplyClick} />
+            <ShareLogo />
             <p className="post-contents">
               HONG에서 만들고 있는 프로젝트다. 만들 때마다 홍홍 웃음소리가
               나온다
@@ -116,11 +119,12 @@ const Post = ({ name, time }) => {
                 className="reply"
                 onChange={onChange}
                 placeholder="댓글 달기..."
+                ref={replyRef}
               />
               {/* <input className="reply" placeholder="댓글 달기..." /> */}
             </div>
             <div className="Post-bottom-right-wrapper">
-              <a className="showReply" onClick={handleReply} href={null}>
+              <a className="showReply" onClick={handleReply}>
                 댓글 보기
               </a>
             </div>

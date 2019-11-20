@@ -1,11 +1,21 @@
 .Hashtag-main-container {
-  width: 200px;
+  width: 150px;
   height: 150px;
   background-color: white;
-  position: absolute;
-  right: 0;
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  padding: 10px 5px;
+  border-radius: 10px;
 }
 
 .Hashtag-hashtag {
   color: blue;
+  cursor: pointer;
+}
+
+.Hashtag-hashtag:hover {
+  font-size: 25px;
+  color: #0b0b61;
+  transition: 0.4s;
 }

@@ -8,6 +8,8 @@ import Home from "./components/Home/Home";
 import Profile from "./components/Profile/Profile";
 import "./App.css";
 import SearchContainer from "./containers/SearchContainer";
+import Search from "./components/Home/Search";
+import FindPW from "./components/loginForm/FindPW";
 
 function App() {
   const state = {
@@ -28,7 +30,14 @@ function App() {
   return (
     <Router>
       <div className="top_fixed">
-        <img id="fixed_logo" src={fixed_logo} alt="" />
+        <img
+          id="fixed_logo"
+          src={fixed_logo}
+          alt=""
+          onClick={() => {
+            window.location = "/home";
+          }}
+        />
         <SearchContainer />
       </div>
       <Route
@@ -45,9 +54,11 @@ function App() {
           />
         )}
       />
+      <Route exact path="/findPW" component={FindPW} />
       <Route exact path="/email" component={Email} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/profile" component={Profile} />
+      <Route exact path="/search" component={Search} />
     </Router>
   );
 }
