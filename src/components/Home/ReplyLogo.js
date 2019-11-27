@@ -9,7 +9,7 @@ const ReplyLogo = ({ onClick }) => {
       width="38.411"
       height="38.411"
       viewBox="0 0 38.411 38.411"
-      style={{ marginRight: "20px" }}
+      style={{ marginRight: "20px", cursor: "pointer" }}
       onClick={onClick}
     >
       <g id="_24px_2_" data-name="24px (2)" transform="translate(0 0)">

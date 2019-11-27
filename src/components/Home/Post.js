@@ -91,8 +91,10 @@ const Post = ({ name, time }) => {
               src="http://blog.jinbo.net/attach/615/200937431.jpg"
               alt=""
             />
-            <p className="user-name">{name}</p>
-            <p className="time">{time}</p>
+            <div className="Post-personal-wrapper">
+              <p className="user-name">{name}</p>
+              <p className="time">{time}</p>
+            </div>
           </div>
           <div className="Post-top-right-wrapper"></div>
         </div>

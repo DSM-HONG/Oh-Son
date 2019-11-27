@@ -9,6 +9,7 @@ const ShareLogo = () => {
       width="38.411"
       height="38.411"
       viewBox="0 0 38.411 38.411"
+      style={{ cursor: "pointer" }}
     >
       <g id="_24px_1_" data-name="24px (1)" transform="translate(0 0)">
         <path

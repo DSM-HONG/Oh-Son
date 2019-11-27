@@ -2,21 +2,6 @@
   width: 800px;
 }
 
-.Post {
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-bottom: 5px;
-  width: 770px;
-  min-height: 75px;
-  max-height: 450px;
-  overflow-y: scroll;
-  border: none;
-  font-weight: normal;
-  font-family: initial;
-  font-size: 20px;
-  padding-left: 20px;
-}
-
 .writing-bottom-wrapper {
   display: relative;
   float: initial;
@@ -33,14 +18,11 @@
   background: #edf5ed;
 }
 
-div:empty::before {
+#Post:empty::before {
   color: grey;
+  content: "글 내용을 입력하세요";
 }
 
-div[data-placeholder]:not([data-placeholder=""]):empty::before {
+#Post[data-placeholder]:not([data-placeholder=""]):empty::before {
   content: attr(data-placeholder);
-}
-
-div:empty::before {
-  content: "";
 }

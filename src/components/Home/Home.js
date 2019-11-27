@@ -20,7 +20,7 @@ const Block = styled.div`
   top: 2rem;
   width: 100%;
   height: 100%;
-  backgroundColor: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.5);
   z-index: 1;
 `
       : ""}
@@ -68,7 +68,7 @@ function Home() {
           state={state.isFocused}
           block={state.isFocused ? "block" : ""}
         />
-        {state.isFocused ? <Block block /> : ""}
+        {state.isFocused ? <Block block={true} /> : ""}
         {postList}
       </ContainerBlock>
       <Hashtag />
